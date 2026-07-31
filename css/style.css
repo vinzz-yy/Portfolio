@@ -3648,36 +3648,69 @@ button {
   filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.5));
 }
 
-/* GitHub Stat Icons - Pure Icon (No Background Box or Border) */
+/* GitHub Stat Cards & Icons - Tap / Hover Vivid Violet State */
+.github-stat-card {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .github-stat-icon {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
+  padding: 8px !important;
+  border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  transition: transform 0.3s ease !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .github-stat-icon svg {
-  stroke: var(--accent) !important;
-  color: var(--accent) !important;
+  stroke: var(--text-muted) !important;
+  color: var(--text-muted) !important;
   width: 28px !important;
   height: 28px !important;
-  transition: transform 0.3s ease, filter 0.3s ease !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-.github-stat-card:hover .github-stat-icon {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  transform: scale(1.2) !important;
+/* On Hover, Tap, Active, or Focus: Card Border & Icon turn Vivid Violet */
+.github-stat-card:hover,
+.github-stat-card:active,
+.github-stat-card:focus,
+.github-stat-card.active {
+  border-color: #6366f1 !important;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.25), 0 0 16px rgba(99, 102, 241, 0.2) !important;
+  transform: translateY(-4px);
 }
 
-.github-stat-card:hover .github-stat-icon svg {
-  stroke: var(--accent) !important;
-  color: var(--accent) !important;
-  filter: drop-shadow(0 0 12px var(--accent-glow)) !important;
+.github-stat-card:hover .github-stat-icon,
+.github-stat-card:active .github-stat-icon,
+.github-stat-card:focus .github-stat-icon,
+.github-stat-card.active .github-stat-icon {
+  background: rgba(99, 102, 241, 0.12) !important;
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.35) !important;
+  transform: scale(1.15) !important;
+}
+
+.github-stat-card:hover .github-stat-icon svg,
+.github-stat-card:active .github-stat-icon svg,
+.github-stat-card:focus .github-stat-icon svg,
+.github-stat-card.active .github-stat-icon svg {
+  stroke: #6366f1 !important;
+  color: #6366f1 !important;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.6)) !important;
+}
+
+.github-stat-card:hover .github-stat-value,
+.github-stat-card:active .github-stat-value,
+.github-stat-card:focus .github-stat-value,
+.github-stat-card.active .github-stat-value {
+  color: #6366f1 !important;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
