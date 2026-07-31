@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f5f9;
+  color: #1e293b;
+  font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.45;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  padding: 0;
+  margin: 0;
+}
+
+/* RESUME CONTAINER - PERFECT A4 SINGLE PAGE FIT */
+.resume-container {
+  width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 24px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TOP ROW: PHOTO + ABOUT ME */
+.top-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+  align-items: start;
+}
+
+.photo-box {
+  width: 175px;
+  height: 200px;
+  background: #e8e4df;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4a5568;
+  margin-top: 8px;
+}
+
+/* PILL HEADER */
+.pill-header {
+  background: #2D3436;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.pill-icon {
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pill-icon svg {
+  width: 11px;
+  height: 11px;
+  fill: #ffffff;
+}
+
+.pill-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+/* MAIN TWO-COLUMN BODY */
+.main-body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  flex: 1;
+}
+
+/* LEFT COLUMN */
+.left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAME BLOCK */
+.name-block {
+  margin-bottom: 14px;
+}
+
+.first-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: #2d3748;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.last-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #1a202c;
+  line-height: 1.1;
+  margin: 2px 0 4px 0;
+}
+
+.job-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9.8px;
+  font-weight: 600;
+  font-style: italic;
+  color: #4a5568;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* SECTION BLOCK */
+.section-block {
+  margin-bottom: 14px;
+}
+
+/* CONTACT LIST */
+.contact-list {
+  margin-top: 6px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10.5px;
+  color: #2d3748;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.c-icon {
+  width: 16px;
+  height: 16px;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.c-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+/* SKILLS LIST */
+.skills-list {
+  margin-top: 6px;
+}
+
+.skill-item {
+  margin-bottom: 8px;
+}
+
+.skill-title {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.2px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 3px;
+}
+
+.dot-rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.dot {
+  width: 6.8px;
+  height: 6.8px;
+  border-radius: 50%;
+  background: #d1d5db;
+  display: inline-block;
+}
+
+.dot.filled {
+  background: #2D3436;
+}
+
+/* CERTIFICATIONS LIST */
+.cert-list {
+  list-style: none;
+  margin-top: 6px;
+  padding: 0;
+}
+
+.cert-list li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10.2px;
+  color: #2d3748;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.cert-list li::before {
+  content: "🏆";
+  font-size: 10px;
+}
+
+/* RIGHT COLUMN */
+.right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TIMELINE (EDUCATION & EXPERIENCE) */
+.timeline {
+  position: relative;
+  padding-left: 16px;
+  margin-top: 6px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: #4a5568;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 11px;
+}
+
+.timeline-node {
+  position: absolute;
+  left: -16px;
+  top: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2D3436;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #4a5568;
+}
+
+.degree {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 1px 0;
+}
+
+.company-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 1px 0;
+}
+
+.year, .work-date {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9.8px;
+  font-weight: 600;
+  color: #64748b;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.institution {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10.5px;
+  font-style: italic;
+  color: #1e3a8a;
+  font-weight: 600;
+  margin: 0;
+}
+
+.job-role {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 2px 0;
+}
+
+.bullet-list {
+  padding-left: 12px;
+  margin: 2px 0 0 0;
+}
+
+.bullet-list li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9.8px;
+  color: #4a5568;
+  line-height: 1.38;
+  margin-bottom: 2px;
+}
+
+/* PRINT MEDIA STYLES FOR PERFECT SINGLE PAGE FILL */
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .resume-container {
+    box-shadow: none;
+    padding: 24px 30px;
+    width: 210mm;
+    height: 297mm;
+    max-height: 297mm;
+    box-sizing: border-box;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
